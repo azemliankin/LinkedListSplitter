@@ -35,11 +35,10 @@ public class LinkedListSplitter {
 
         Iterator<T> iterator = input.descendingIterator();
         while (iterator.hasNext()) {
-            T item = iterator.next();
             if (addToEven) {
-                even.addLast(item);
+                even.addLast(iterator.next());
             } else {
-                odd.addLast(item);
+                odd.addLast(iterator.next());
             }
             addToEven = !addToEven;
         }
